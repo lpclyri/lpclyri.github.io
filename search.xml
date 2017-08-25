@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[laravel study note]]></title>
+      <url>/2017/08/23/laravel-study-note/</url>
+      <content type="html"><![CDATA[<h2 id="laravel-study"><a href="#laravel-study" class="headerlink" title="laravel study"></a>laravel study</h2><ul>
+<li><p>laravel 为已增加的表添加字段<br>$ php artisan make:migration add_completed_to_tasks_table –table=tasks</p>
+</li>
+<li><p>下一步<br>然后在database-&gt;migrations-&gt;新表中添加：$table-&gt;boolean(‘completed’)-&gt;default(0);<br>在down()函数中，添加：$table-&gt;dropColumn(‘completed’);</p>
+</li>
+<li><p>最后一步<br>执行迁移：php artisan migrate<br>如果想回滚本次迁移，可以执行：php artisan migrate:rollback-&gt;其实这名会执行down().</p>
+</li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[php code scan]]></title>
+      <url>/2017/08/22/php-code-scan/</url>
+      <content type="html"><![CDATA[<p>Formely, I didn’t experience code scan ever. Even though this time just a little test,<br>I think it reserves recording.<br>From code scan bugs, I got a deeper understanding. Params filtering is really very<br>important, I get a lesson.<br>作为一个小码农，要时刻记得自己的责任。单单为了完成任务，提高了了。有乐趣的工作，远比草草应付来得让人欢喜。</p>
+<p><hr></p>
+<div>吾来时见江海古，苍崖行遍谒玄门。</div>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[PHP common array function]]></title>
+      <url>/2017/08/18/PHP-common-array-function/</url>
+      <content type="html"><![CDATA[<p>PHP数组操作的基本函数</p>
+<p>数组的键名和值</p>
+<p>array_values($arr);  获得数组的值<br>array_keys($arr);  获得数组的键名<br>array_flip($arr);  数组中的值与键名互换（如果有重复前面的会被后面的覆盖）<br>in_array(“apple”,$arr);  在数组中检索apple<br>array_search(“apple”,$arr);  在数组中检索apple ，如果存在返回键名<br>array_key_exists(“apple”,$arr);  检索给定的键名是否存在数组中<br>isset($arr[apple]):   检索给定的键名是否存在数组中</p>
+<p>数组的内部指针</p>
+<p>current($arr);  返回数组中的当前单元<br>pos($arr);  返回数组中的当前单元<br>key($arr);  返回数组中当前单元的键名<br>prev($arr);  将数组中的内部指针倒回一位<br>next($arr);  将数组中的内部指针向前移动一位<br>end($arr);  将数组中的内部指针指向最后一个单元<br>reset($arr;  将数组中的内部指针指向第一个单元<br>each($arr);  将返回数组当前元素的一个键名/值的构造数组，并使数组指针向前移动一位<br>list($key,$value)=each($arr);  获得数组当前元素的键名和值</p>
+<p>数组和变量之间的转换</p>
+<p>extract($arr);用于把数组中的元素转换成变量导入到当前文件中，键名当作变量名，值作为变量值<br>注：（第二个参数很重要，可以看手册使用,默认是覆盖）使用方法 echo $a;<br>compact(var1,var2,var3);用给定的变量名创建一个数组</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[I am lyri]]></title>
+      <url>/2017/08/18/I-am-lyri/</url>
+      <content type="html"><![CDATA[<p>Hi,everybody:<br>  I’m lyri. I have worked about 5 years. Among, the first 2 years, I worked as a …<br>Then I couldn’t tolerate free and repeated life. I quit the job and come to Shanghai<br>in April 1st, 2015.<br>  In the beginning, I almost could not find a job because of lacking of experience.<br>I have left real life too long to fit it.<br>  …<br>  I just want to test my hexo blog. In fact, I haven’t written a article in English<br>for a long time. I almost can’t organize my poor vacabulary. May be I know it when<br>I see. Ok, let me over it here. Thank you! </p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/2017/08/18/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+  
+  
+</search>
